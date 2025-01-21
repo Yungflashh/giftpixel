@@ -1,0 +1,252 @@
+.AccountsettingPage {
+    background: rgba(242, 223, 216, 1);
+    height: 100vh;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+.AccountsettingPage-box {
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 50%;
+    height: 95vh;
+    line-height: 2.5rem;
+    padding: 30px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.profile-account-settingbox {
+    width: 15%;
+}
+
+.Notification {
+    border: 1px solid rgba(242, 223, 216, 1);
+    border-radius: 10px;
+    height: 70px;
+}
+
+.Notification p {
+    font-size: 12px;
+}
+
+.email-notification {
+    margin-top: -20px;
+}
+
+.services p {
+    font-size: 14px;
+}
+
+.acct-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.acct-modal-content {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.acct-modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.acct-modal-content div {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.acct-modal-content button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.acct-modal-content button:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+.acct-modal-content button:focus {
+    outline: none;
+}
+
+.acct-modal-content button.cancel {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+}
+
+.acct-modal-content button.cancel:hover {
+    background-color: #e2e6ea;
+}
+
+.acct-modal-content button.confirm {
+    background-color: #dc3545;
+    color: white;
+}
+
+.acct-modal-content button.confirm:hover {
+    background-color: #c82333;
+}
+
+.pin-input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.pin-input {
+    width: 46px;
+    height: 40px;
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.pin-input:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+.acct-modal-content button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-icon {
+    color: red;
+    font-size: 30px;
+}
+
+.center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.delete {
+    color: red;
+    justify-content: center;
+    align-items: center;
+}
+
+.others p {
+    font-size: 14px;
+    word-spacing: 2px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .AccountsettingPage {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .AccountsettingPage-box {
+        width: 100%;
+        height: auto; /* Let content adjust dynamically */
+    }
+
+    .profile-account-settingbox {
+        width: 100%;
+        margin-bottom: 10px;
+        display: flex;
+        align-self: center;
+    }
+
+    .Notification {
+        height: auto;
+        padding: 10px;
+    }
+
+    .acct-modal-content {
+        width: 80%;
+        max-width: 400px; /* Ensure modal isn't too wide */
+    }
+
+    .pin-input-container {
+        /* flex-direction: column; */
+        align-items: center;
+    }
+
+    .pin-input {
+        width: 50px;
+        margin-bottom: 10px;
+    }
+
+    .toggle {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-icon {
+        font-size: 24px;
+    }
+
+    .center {
+        /* flex-direction: column; */
+        align-items: flex-start;
+    }
+
+    .delete {
+        align-items: flex-start;
+    }
+
+    .others p {
+        font-size: 12px;
+        word-spacing: 1px;
+    }
+}
+
+/* Very small devices like phones in portrait mode */
+@media (max-width: 480px) {
+    .Notification p {
+        font-size: 10px;
+    }
+
+    .acct-modal-content h2 {
+        font-size: 16px;
+    }
+
+    .acct-modal-content button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}

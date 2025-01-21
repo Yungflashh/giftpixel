@@ -1,0 +1,228 @@
+/* General Header Container */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 10px 20px; /* Reduced padding for smaller screens */
+    position: relative;
+  }
+  
+  .logo-container img {
+    height: 24px; /* Adjust logo size */
+  }
+  
+  /* Links Container */
+  .links-container {
+    display: flex;
+    gap: 40px;
+    transition: transform 0.3s ease; /* Smooth transition for menu */
+
+    nav{
+      font-size: 14px;
+    }
+  }
+  
+  .anchor-link {
+    text-decoration: none;
+  }
+  
+  /* Profile Container */
+  .profile-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  /* Hamburger Menu Icon */
+  .hamburger-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger-icon .bar {
+    width: 25px;
+    height: auto;
+    background-color: #333;
+    border-radius: 5px;
+  }
+  
+  /* Show hamburger on small screens */
+  @media (max-width: 768px) {
+    .links-container {
+      display: none; /* Hide links initially */
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      top: 70px; /* Position below the header */
+      right: 20px;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+  
+    .links-container.active {
+      display: flex; /* Show when active */
+    }
+  
+    .hamburger-icon {
+      display: flex; /* Show hamburger menu */
+    }
+  }
+  
+  /* Notification Dropdown */
+.notification-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 500px;  /* Increased width */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  z-index: 1000;
+  max-height: 680px;  /* Increased height */
+  overflow-y: auto;
+}
+/* Close Button Styling */
+.close-btn {
+  position: absolute;
+  top: 2px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: #e47f7f;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #333; /* Darker color on hover */
+}
+
+
+/* Header profile container for positioning */
+.profile-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* Notification Items */
+.notification-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Notification Icon Styling */
+.notification-icon {
+  width: 40px;
+  height: 40px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin-right: 0; /* Remove extra margin */
+}
+/* Responsive Adjustments */
+
+
+.notification-text {
+  flex: 1;
+  padding: 10px;
+  text-align: left;
+}
+
+.notification-text p {
+  font-size: 14px;
+  margin: 3px 0;
+}
+
+.notification-text small {
+  font-size: 12px;
+  color: #777;
+  float: right;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.hamburger-icon .bar {
+  width: 30px;
+  height: 4px;
+  margin: 5px;
+  background-color: #333;
+  border-radius: 4px;
+}
+
+/* Responsive Hamburger Menu */
+@media (max-width: 768px) {
+  .hamburger-icon {
+    display: block;
+  }
+  .profile-container {
+    position: absolute;
+    right: 100px; /* Moves the profile section to the right */
+    top: 25px;
+  }
+
+  .notification-icon {
+    position: relative;
+    right: 0; /* Aligns it properly */
+    margin-right: 5px; /* Small spacing */
+  }
+  .notification-dropdown {
+    
+    width: 500px;  /* Increased width */
+  
+  }
+}
+@media (max-width: 630px) {
+
+  .notification-dropdown {
+    right: -70px;
+    width: 400px;  /* Increased width */
+
+  }
+}
+@media (max-width: 530px) {
+
+  .notification-dropdown {
+   
+    width: 350px;  /* Increased width */
+    right: -70px;
+
+  }
+}
+@media (max-width: 420px) {
+
+  .notification-dropdown {
+   
+    width: 350px;  /* Increased width */
+    right: -80px;
+
+  }
+}
+@media (max-width: 320px) {
+
+  .notification-dropdown {
+   
+    width: 300px;  /* Increased width */
+    right: -90px;
+
+  }
+}

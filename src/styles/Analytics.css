@@ -1,0 +1,98 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(242, 223, 216, 1); /* Soft beige background */
+  color: #333; /* Neutral text color */
+  margin: 0;
+  padding: 0;
+}
+.back-button {
+  
+  top: 10px;
+  left: 10px;
+  padding: 10px 20px;
+  background-color: #abebde;
+  color: rgb(2, 2, 2);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-button:hover {
+  background-color: rgba(255, 159, 159, 1);
+}
+
+/* Analytics Container */
+.analytics-container {
+  padding: 20px;
+}
+
+/* Grid for all containers */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns per row */
+  gap: 20px; /* Space between containers */
+  margin-top: 20px;
+}
+
+/* Top Performing Date Container */
+.top-performing-date {
+  background: #f7f4f4; /* White background */
+  padding: 20px;
+  height: 110px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+}
+
+.top-performing-date h3 {
+  font-size: 1.6em;
+  color: #333; /* Neutral text */
+  margin: 0;
+}
+
+.top-performing-date p {
+  margin: 5px 0;
+}
+
+.top-performing-date #clicks {
+  color: #e57373; /* Soft red for clicks count */
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.top-performing-date small {
+  color: #666; /* Lighter neutral for date range */
+  font-size: 0.9em;
+}
+
+/* Chart Card Styling */
+.chart-container {
+  background: #ffffff; /* White card */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.move-up {
+  margin-top: -420px; /* Moves the container up */
+}
+
+.chart-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: #5c6bc0; /* Lavender heading */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .analytics-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+}

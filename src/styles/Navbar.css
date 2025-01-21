@@ -1,0 +1,143 @@
+/* General Navbar Styles */
+.navbar-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(242, 223, 216, 1);
+    padding: 20px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Keeps logo on the left and other content distributed */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #faf9f8;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  /* Logo Section */
+  .logo img {
+    height: 40px;
+  }
+  
+  /* Wrapper for Nav Links to center them */
+  .nav-links-wrapper {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center; /* Center nav items */
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+  }
+  .buttons {
+    display: none !important;
+  }
+  
+  /* Buttons Section for Larger Screens (default - hidden on mobile) */
+  .buttons-right {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end; /* Align buttons to the right */
+  }
+  
+  /* Buttons Styling */
+  .sign-in-btn {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .sign-up-btn {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(255, 80, 80, 1);
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Menu Icon (Right-Aligned for Small Screens) */
+  .menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    /* Center the Nav Links */
+    .nav-links-wrapper {
+      display: flex;
+      justify-content: center; /* Keeps nav links centered */
+      width: 100%;
+    }
+    .logo img {
+        height: 20px;
+    }
+  
+    /* Nav Links inside the dropdown */
+    .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      gap: 30px;
+      position: absolute;
+      top: 55px;
+      background-color: #faf9f8;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    /* Buttons inside dropdown in mobile view */
+    .buttons {
+      margin-left: -25px;
+      display: block !important;
+      gap: 10px;
+      flex-direction: column; /* Stack buttons vertically inside the dropdown */
+      padding: 10px 0;
+    }
+  
+    /* Menu icon should be shown on mobile */
+    .menu-icon {
+      display: block;
+      position: absolute;
+      right: 20px; /* Align menu icon to the right */
+      
+    }
+  
+    /* Hide buttons on larger screens for mobile */
+    .buttons-right {
+      display: none; /* Hide buttons on mobile in the main navbar */
+    }
+  }
+  
