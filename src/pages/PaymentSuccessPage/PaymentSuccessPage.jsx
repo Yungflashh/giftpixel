@@ -29,7 +29,7 @@ const PaymentSuccessPage = () => {
             setCountdown((prev) => {
                 if (prev === 1) {
                     clearInterval(timer);
-                    navigate("/signin"); // Redirect to sign-in after countdown finishes
+                    // navigate("/signin"); 
                 }
                 return prev - 1;
             });

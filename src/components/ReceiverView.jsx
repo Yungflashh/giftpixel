@@ -84,8 +84,10 @@ const ReceiverView = () => {
     }
 
     try {
+      const username = Cookies.get('username');
       Cookies.set('requestId', requestId, { expires: 7 });
-      const response = await axios.post('https://auth-zxvu.onrender.com/api/auth/paystack/payment', { orderId: requestId, amount, email });
+      const response = await axios.post('https://auth-zxvu.onrender.com/api/auth/paystack/payment', 
+      { orderId: requestId, amount, email , username});
 
       if (response.data.success) {
         const authorizationUrl = response.data.authorization_url;
