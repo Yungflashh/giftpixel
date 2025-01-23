@@ -29,7 +29,7 @@ const ReceiverView = () => {
   useEffect(() => {
     const fetchReceiverView = async () => {
       try {
-        const response = await axios.get(`https://giftpixel.onrender.com/auth/get-promise-details/${promiseTitleId}`);
+        const response = await axios.get(`https://giftpixel.onrender.com/api/auth/get-promise-details/${promiseTitleId}`);
         const username = response.data.username;
         Cookies.set("username", username);
 
