@@ -243,6 +243,7 @@ const WalletDetails = () => {
                             <th>Description</th>
                             <th>Amount</th>
                             <th>Status</th>
+                            <th>Transaction Type</th>
                             <th>Transaction ID</th>
                         </tr>
                     </thead>
@@ -255,6 +256,8 @@ const WalletDetails = () => {
                                 <td className={`status ${transaction.status ? transaction.status.toLowerCase() : "unknown"}`}>
                                     {transaction.status || "Unknown"}
                                 </td>
+                                <td>{transaction.transactionType || "Unknown"}</td>
+                                
                                 <td>{transaction.Transaction_ID || "N/A"}</td>
                             </tr>
                         ))}
