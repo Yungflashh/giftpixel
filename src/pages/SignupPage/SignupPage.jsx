@@ -45,7 +45,7 @@ const SignupPage = () => {
     try {
       Cookies.set('email', formData.email, { expires: 1, path: '/emailverificationpage' });
 
-      const response = await fetch("https://auth-zxvu.onrender.com/api/auth/signup", {
+      const response = await fetch("https://giftpixel.onrender.com/api/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -27,7 +27,7 @@ const Header = () => {
     setError(null);
     try {
       const response = await axios.get(
-        `https://auth-zxvu.onrender.com/api/auth/notifications`,
+        `https://giftpixel.onrender.com/api/auth/notifications`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -27,7 +27,7 @@ const ForgetPassword = () => {
 
     setIsLoading(true);
 
-    axios.post("https://auth-zxvu.onrender.com/api/auth/reset-password", { email })
+    axios.post("https://giftpixel.onrender.com/api/auth/reset-password", { email })
       .then(response => {
         setIsRequestSent(true); 
         console.log("Backend Response:", response); 

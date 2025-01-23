@@ -32,7 +32,7 @@ const EmailVerificationPage = () => {
       console.log("OTP to send:", otp);
 
       // I sent the OTP to the backend for verification
-      const response = await fetch("https://auth-zxvu.onrender.com/api/auth/verify-email", {
+      const response = await fetch("https://giftpixel.onrender.com/api/auth/verify-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -70,7 +70,7 @@ const EmailVerificationPage = () => {
   const sendOtp = async () => {
     try {
       // I sent a request to resend the OTP to the user's email
-      const response = await fetch("https://auth-zxvu.onrender.com/api/auth/verify-email", {
+      const response = await fetch("https://giftpixel.onrender.com/api/auth/verify-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

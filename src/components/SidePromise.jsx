@@ -58,7 +58,7 @@ const SidePromise = ({ closeSidebar }) => {
       setSuccessMessage(""); 
 
       const response = await axios.put(
-        "https://auth-zxvu.onrender.com/api/auth/update-promise",
+        "https://giftpixel.onrender.com/api/auth/update-promise",
         requestData,
         {
           headers: {

@@ -57,7 +57,7 @@ const SignInPage = () => {
       // Cookies.set("myCookie", "sghwdeio")
 
        axios
-      .post("https://auth-zxvu.onrender.com/api/auth/login", userData, { withCredentials: true }) // Token will be stored as an httpOnly cookie
+      .post("https://giftpixel.onrender.com/api/auth/login", userData, { withCredentials: true }) // Token will be stored as an httpOnly cookie
       .then((response) => {
         setLoading(false);
         
@@ -85,7 +85,7 @@ const SignInPage = () => {
         if (token) {
           // console.log(token);
           
-          axios.get("https://auth-zxvu.onrender.com/api/auth/user/promises", {
+          axios.get("https://giftpixel.onrender.com/api/auth/user/promises", {
             withCredentials: true,
             headers: { Authorization: `Bearer ${token}` },
           })

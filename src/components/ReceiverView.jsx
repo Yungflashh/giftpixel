@@ -29,7 +29,7 @@ const ReceiverView = () => {
   useEffect(() => {
     const fetchReceiverView = async () => {
       try {
-        const response = await axios.get(`https://auth-zxvu.onrender.com/api/auth/get-promise-details/${promiseTitleId}`);
+        const response = await axios.get(`https://giftpixel.onrender.com/auth/get-promise-details/${promiseTitleId}`);
         const username = response.data.username;
         Cookies.set("username", username);
 
@@ -86,7 +86,7 @@ const ReceiverView = () => {
     try {
       const username = Cookies.get('username');
       Cookies.set('requestId', requestId, { expires: 7 });
-      const response = await axios.post('https://auth-zxvu.onrender.com/api/auth/paystack/payment', 
+      const response = await axios.post('https://giftpixel.onrender.com/api/auth/paystack/payment', 
       { orderId: requestId, amount, email , username});
 
       if (response.data.success) {

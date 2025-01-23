@@ -60,7 +60,7 @@ const GetShareLinkAnalytics = () => {
 
       try {
         const response = await axios.get(
-          `https://auth-zxvu.onrender.com/api/auth/analytics/${promiseTitleId}`
+          `https://giftpixel.onrender.com/api/auth/analytics/${promiseTitleId}`
         );
         if (response.data.success) {
           const analytics = response.data.analytics;

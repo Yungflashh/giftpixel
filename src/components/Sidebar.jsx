@@ -68,7 +68,7 @@ const Sidebar = ({ onClose, userId, promiseId }) => {
 
     try {
       const response = await axios.put(
-        "https://auth-zxvu.onrender.com/api/auth/addRequest",
+        "https://giftpixel.onrender.com/api/auth/addRequest",
         data,
         {
           headers: {

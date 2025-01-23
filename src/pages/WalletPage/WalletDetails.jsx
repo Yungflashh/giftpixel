@@ -43,7 +43,7 @@ const WalletDetails = () => {
         }
 
         try {
-            const response = await axios.get('https://auth-zxvu.onrender.com/api/auth/getWalletDetails', {
+            const response = await axios.get('https://giftpixel.onrender.com/api/auth/getWalletDetails', {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                 },
@@ -118,7 +118,7 @@ const WalletDetails = () => {
 
         try {
             const token = Cookies.get("token");
-            const response = await axios.post("https://auth-zxvu.onrender.com/api/auth/check-payment-pin", {
+            const response = await axios.post("https://giftpixel.onrender.com/api/auth/check-payment-pin", {
                 paymentPin: pin,
             }, {
                 headers: {
@@ -182,7 +182,7 @@ const WalletDetails = () => {
 
         try {
             const token = Cookies.get("token");
-            const response = await axios.post('https://auth-zxvu.onrender.com/api/auth/withdraw', withdrawalData, {
+            const response = await axios.post('https://giftpixel.onrender.com/api/auth/withdraw', withdrawalData, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                 },

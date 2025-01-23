@@ -45,7 +45,7 @@ const AccountSettingPage = () => {
       try {
         const token = Cookies.get("token")
        
-          const response = await axios.post("https://auth-zxvu.onrender.com/api/auth/create-payment-pin",
+          const response = await axios.post("https://giftpixel.onrender.com/api/auth/create-payment-pin",
 
            { paymentPin: pinValue},
              {

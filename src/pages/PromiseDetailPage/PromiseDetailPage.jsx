@@ -145,7 +145,7 @@ const CreatorView = ({ promiseTitleId }) => {
                 }
 
                 const response = await axios.post(
-                    'https://auth-zxvu.onrender.com/api/auth/get-promise-requests',
+                    'https://giftpixel.onrender.com/api/auth/get-promise-requests',
                     { promiseTitleId },
                     { headers: { Authorization: `Bearer ${token}` } }
                 );
@@ -253,7 +253,7 @@ const PromiseDetailPage = () => {
 
         try {
             await axios.post(
-                "https://auth-zxvu.onrender.com/api/auth/user/submit-request",
+                "https://giftpixel.onrender.com/api/auth/user/submit-request",
                 requestData,
                 { headers: { Authorization: `Bearer ${token}` } }
             );
@@ -276,7 +276,7 @@ const PromiseDetailPage = () => {
 
         try {
             const response = await axios.post(
-                `https://auth-zxvu.onrender.com/api/auth/sharePromise/${promiseId}`,
+                `https://giftpixel.onrender.com/api/auth/sharePromise/${promiseId}`,
                 
                 { headers: { Authorization: `Bearer ${token}` } }
             );

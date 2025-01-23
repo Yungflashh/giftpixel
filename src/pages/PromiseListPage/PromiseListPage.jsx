@@ -27,7 +27,7 @@ const PromiseListPage = () => {
     }
 
     axios
-      .get("https://auth-zxvu.onrender.com/api/auth/getUsername", {
+      .get("https://giftpixel.onrender.com/api/auth/getUsername", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -48,7 +48,7 @@ const PromiseListPage = () => {
 
     setLoading(true);
     axios
-      .get("https://auth-zxvu.onrender.com/api/auth/user/promises", {
+      .get("https://giftpixel.onrender.com/api/auth/user/promises", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

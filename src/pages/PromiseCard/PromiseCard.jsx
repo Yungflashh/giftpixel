@@ -22,7 +22,7 @@ const PromiseCard = () => {
     }
 
     axios
-      .get("https://auth-zxvu.onrender.com/api/auth/getUsername", {
+      .get("https://giftpixel.onrender.com/api/auth/getUsername", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

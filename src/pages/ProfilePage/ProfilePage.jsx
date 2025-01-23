@@ -40,7 +40,7 @@ const ProfilePage = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          "https://auth-zxvu.onrender.com/api/auth/getUserData",
+          "https://giftpixel.onrender.com/api/auth/getUserData",
           {
             method: "GET",
             headers: {
@@ -108,7 +108,7 @@ const ProfilePage = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        "https://auth-zxvu.onrender.com/api/auth/signup",
+        "https://giftpixel.onrender.com/api/auth/signup",
         {
           method: "POST",
           headers: {

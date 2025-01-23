@@ -41,7 +41,7 @@ const PaymentSuccessPage = () => {
     const verifyPayment = async (reference, trxref) => {
         try {
             const response = await axios.post(
-                'https://auth-zxvu.onrender.com/api/auth/payment/verify',
+                'https://giftpixel.onrender.com/api/auth/payment/verify',
                 {
                     reference: reference,
                     trxref: trxref,

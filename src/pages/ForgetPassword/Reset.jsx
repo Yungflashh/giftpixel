@@ -30,7 +30,7 @@ const ResetPassword = () => {
     console.log(password);
 
     axios
-      .post("https://auth-zxvu.onrender.com/api/auth/password-update/token", { password, resetToken })
+      .post("https://giftpixel.onrender.com/api/auth/password-update/token", { password, resetToken })
       .then((response) => {
         console.log("Password reset successful:", response);
         alert("Your password has been successfully reset!");
