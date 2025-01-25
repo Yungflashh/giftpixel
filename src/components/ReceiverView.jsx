@@ -84,12 +84,14 @@ const ReceiverView = () => {
     }
 
     try {
-      const username = Cookies.get('username');
+      
       Cookies.set('requestId', requestId, { expires: 7 });
       const response = await axios.post('https://giftpixel.onrender.com/api/auth/paystack/payment', 
-      { orderId: requestId, amount, email , username});
+      { orderId: requestId, amount, email});
 
       if (response.data.success) {
+        console.log(requestId);
+        
         const authorizationUrl = response.data.authorization_url;
         if (authorizationUrl) {
           navigate('/payment-success', { state: { requestId } });
