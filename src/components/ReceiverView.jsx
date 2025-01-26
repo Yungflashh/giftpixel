@@ -120,6 +120,7 @@ const ReceiverView = () => {
       setEmailValid(false);
       return;
     }
+    
 
     setIncreaseAmount(true);
     setModalState({ ...modalState, requestId, amount });
